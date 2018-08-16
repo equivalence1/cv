@@ -1,0 +1,114 @@
+\documentclass[10pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.89, top=1.5cm, bottom=0cm]{geometry} % Reduce document margins
+
+\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Dmitrii} % Your first name
+\familyname{Kravchenko} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+%\address{Veselnaya St., 9-15}{Saint Petersburg, Russia}
+\mobile{ +7 (950) 0472765}
+\email{equivalence1@gmail.com}
+\github{Github: \href{https://github.com/equivalence1/}{\color{blue}{equivalence1}}}
+%\codeforces{Codeforces: \href{http://codeforces.com/profile/Nikitosh/}{\color{blue}{Nikitosh}}}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+%\cventry{2009--2014}{School student}{Saint Petersburg Presidential Physics and Mathematics Lyceum 239}{Saint Petersburg}{}{} 
+%\cventry{2011, 2012, 2013}{Student}{Summer Informatics School}{Kostroma}{}{} 
+\cventry{2014--present}{Bachelor of Computer Science}{St. Petersburg Academic University of Russian Academy of Sciences, Department of Mathematics and Information Technology}{Saint Petersburg}{}{}
+\cventry{2018--2020}{Master of Computer Science}{Higher School of Economics in Saint-Petersburg, School of Data Analysis and Artificial Intelligence}{Saint Petersburg}{}{}
+
+
+\section{Theoretical background}
+
+\cvitem{Programming}{Algorithms and data structures, Networks, Databases, Parallel Programming, Big Data, Software design}
+\cvitem{Math}{Calculus, Algebra, Discrete mathematics, Probability theory, Mathematical logic, Information theory}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\section{Experience}
+
+\cventry{2017-2018}{Software Engineer Intern}{Acronis}{St. Petersburg (remote)}{}
+{Acronis has its own async io library written on C. The central part of it are coroutines. The
+main flaw of this library for now is that it is single-threaded (i.e. all corouties are scheduled on the same kernel-level thread).
+I expand the functionality by making it multi-threaded so we can use the full potential of a modern hardware.}
+
+\cventry{2016}{Software Engineer Intern}{JetBrains}{St. Petersburg}{}
+{Created "attach to local process" debugger feature in RubyMine IDE. It allows you to 
+debug local process which wasn't initially started under debug mode. After you had finished your
+debug session, you can detach from the process and it will continue to run as if nothing
+had happened. This feature was successfully released and you can see more info \href{https://www.jetbrains.com/help/ruby/attaching-to-local-process.html}{\color{blue}{here}}.}
+
+\section{Teaching experience}
+
+\cventry{2017}{Teaching assistant}{Saint Petersburg Academic University}{Saint Petersburg}{}{Assessed students' homeworks for "Operating systems" and "Computer Architecture" courses.}
+
+\section{Projects}
+
+\cventrynotbold{2017}{\href{https://github.com/equivalence1/aucont}{\color{blue}{Linux containers}}}{}{C, Python}{}
+{My own implementation of linux containers. Basically, it is like Docker. Of course my version lacks some of docker's fancy features like Dockerhub and Dockerfile, but it's also more lightweight.
+It can start and stop containers, list all currently running containers, execute a command inside of a container. 
+Mostly written on C but some parts are implemented using Python.}
+
+\cventrynotbold{2016}{\href{https://github.com/equivalence1/p2p_chat}{\color{blue}{Peer-to-peer chat}}}{}{Java}{\texttt{Maven, JavaFX, Google protobuf, gRPC}}
+{Simple online peer-to-peer chat. Written completely on Java. I use JavaFX library for UI, Google protobuf for message transmission, gRPC to show that the other user is currently typing.}
+
+\cventrynotbold{2015--2016}{\href{https://github.com/auTimetable/auTimetable}{\color{blue}{auTimetable}}}{}{Java}{\texttt{Android, Google app engine, Twitter Bootstrap}}
+{Android application to manage and view students' schedule of the classes. Application itself is written on Java. Server part
+is written on Java with a use of Google app engine for the back-end and JavaScript with a use of Twitter Bootstrap for the front-end. Web application allows entitled (i.e. teachers) users to alter students'
+schedule, while android part only allows to view the timetable.}
+
+%----------------------------------------------------------------------------------------
+%	ACHIEVEMENTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Achievements}
+
+\cvitemwithcomment{2014}{All-Russian Olympiad of School Students in Informatics, 29th place}{Programming competition among the best high school students in Russia}
+\cvitemwithcomment{2012}{School All-Russian Team Programming Championship, 12st place}{Programming team competition among the best high school students in Russia}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Technology summary}
+
+\cvitem{\scriptsize{Languages (good knowledge)}}{Java, C}
+\cvitem{\scriptsize{Languages (basic knowledge)}}{Go, C++, Python, Ruby, Scala, Kotlin, Haskell, JavaScript}
+\cvitem{\scriptsize{Technologies}}{git, docker, postgreSQL, Linux, OpenCL, google protobuf, ROS, ElasticSearch}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{Russian}{Native speaker}{}
+\cvitemwithcomment{English}{Upper Intermediate}{}
+
+\end{document}
