@@ -20,7 +20,7 @@
 % All information in this block is optional, comment out any lines you don't need
 \title{Curriculum Vitae}
 %\address{Veselnaya St., 9-15}{Saint Petersburg, Russia}
-\mobile{ +7 (950) 0472765}
+%\mobile{ +7 (950) 0472765}
 \email{equivalence1@gmail.com}
 \github{Github: \href{https://github.com/equivalence1/}{\color{blue}{equivalence1}}}
 %\codeforces{Codeforces: \href{http://codeforces.com/profile/Nikitosh/}{\color{blue}{Nikitosh}}}
@@ -39,30 +39,29 @@
 
 %\cventry{2009--2014}{School student}{Saint Petersburg Presidential Physics and Mathematics Lyceum 239}{Saint Petersburg}{}{} 
 %\cventry{2011, 2012, 2013}{Student}{Summer Informatics School}{Kostroma}{}{} 
-\cventry{2014--present}{Bachelor of Computer Science}{St. Petersburg Academic University of Russian Academy of Sciences, Department of Mathematics and Information Technology}{Saint Petersburg}{}{}
+\cventry{2014--2018}{Bachelor of Computer Science}{St. Petersburg Academic University of Russian Academy of Sciences, Department of Mathematics and Information Technology}{Saint Petersburg}{}{}
 \cventry{2018--2020}{Master of Computer Science}{Higher School of Economics in Saint-Petersburg, School of Data Analysis and Artificial Intelligence}{Saint Petersburg}{}{}
-
-
-\section{Theoretical background}
-
-\cvitem{Programming}{Algorithms and data structures, Networks, Databases, Parallel Programming, Big Data, Software design}
-\cvitem{Math}{Calculus, Algebra, Discrete mathematics, Probability theory, Mathematical logic, Information theory}
+\cventry{2020--}{CS PhD}{Higher School of Economics in Saint-Petersburg, School of Data Analysis and Artificial Intelligence}{Saint Petersburg}{}{}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 \section{Experience}
 
-\cventry{2017-2018}{Software Engineer Intern}{Acronis}{St. Petersburg (remote)}{}
-{Acronis has its own async io library written on C. The central part of it are coroutines. The
-main flaw of this library for now is that it is single-threaded (i.e. all corouties are scheduled on the same kernel-level thread).
-I expand the functionality by making it multi-threaded so we can use the full potential of a modern hardware.}
+\cventry{2019-present}{Full-time Software Engineer}{Yandex}{St. Petersburg}{}
+{Being part of Yandex.Cloud Machine Learning tools team, my job was to provide users (we had both B2U and B2B settings) with such ML tools in cloud as ASR/TTS, Translation, Vision and many more. I personally was mostly working with our ASR product, Yandex.SpeechKit, working on both its infrastructure and ML models.}
 
-\cventry{2016}{Software Engineer Intern}{JetBrains}{St. Petersburg}{}
-{Created "attach to local process" debugger feature in RubyMine IDE. It allows you to 
-debug local process which wasn't initially started under debug mode. After you had finished your
-debug session, you can detach from the process and it will continue to run as if nothing
-had happened. This feature was successfully released and you can see more info \href{https://www.jetbrains.com/help/ruby/attaching-to-local-process.html}{\color{blue}{here}}.}
+\cventry{2018-2018}{Software Engineering Intern}{afi.ai}{St. Petersburg (remote)}{}
+{Afi.ai makes corporate backups for products like GSuite, MS Office 365. My task was to implement indexing of those backups in ElasticSearch cluster so that users could search through their documents. The system ought to be horizontally scalable, multitenant, fast and secure.}
+
+\cventry{2017-2018}{Software Engineering Intern}{Acronis}{St. Petersburg (remote)}{}
+{Acronis has its own async I/O library written in C. The central part of it are coroutines. The
+main flaw of this library at the beginning of my internship was that it was single-threaded (i.e. all corouties were scheduled on the same kernel-level thread).
+I was implementing multi-threaded coroutines scheduler for our I/O library, so it can use the full potential of a modern hardware.}
+
+\cventry{2016}{Software Engineering Intern}{JetBrains}{St. Petersburg}{}
+{Created "attach to local process" debugger feature in RubyMine IDE, which allows one to
+debug a local process which wasn't initially started under debug mode.}
 
 \section{Teaching experience}
 
@@ -70,18 +69,13 @@ had happened. This feature was successfully released and you can see more info \
 
 \section{Projects}
 
-\cventrynotbold{2017}{\href{https://github.com/equivalence1/aucont}{\color{blue}{Linux containers}}}{}{C, Python}{}
+\cventry{2018-present}{\href{https://github.com/Noxoomo/ml_lib}{\color{blue}{NN + GBDT}}}{}{C++, libtorch, catboost}{}
+{In this project I, my peers, and my advisor are trying to combine two seemingly incompatible models -- Artificial Neural Networks and Gradient Boosted Decision Trees. We came up with an idea of how they can be jointly trained, and our test experiments show that we can achive good quality on image classification tasks. We continue our work and have a lot of ideas to try.}
+
+\cventry{2017}{\href{https://github.com/equivalence1/aucont}{\color{blue}{Linux containers}}}{}{C, Python}{}
 {My own implementation of linux containers. Basically, it is like Docker. Of course my version lacks some of docker's fancy features like Dockerhub and Dockerfile, but it's also more lightweight.
 It can start and stop containers, list all currently running containers, execute a command inside of a container. 
 Mostly written on C but some parts are implemented using Python.}
-
-\cventrynotbold{2016}{\href{https://github.com/equivalence1/p2p_chat}{\color{blue}{Peer-to-peer chat}}}{}{Java}{\texttt{Maven, JavaFX, Google protobuf, gRPC}}
-{Simple online peer-to-peer chat. Written completely on Java. I use JavaFX library for UI, Google protobuf for message transmission, gRPC to show that the other user is currently typing.}
-
-\cventrynotbold{2015--2016}{\href{https://github.com/auTimetable/auTimetable}{\color{blue}{auTimetable}}}{}{Java}{\texttt{Android, Google app engine, Twitter Bootstrap}}
-{Android application to manage and view students' schedule of the classes. Application itself is written on Java. Server part
-is written on Java with a use of Google app engine for the back-end and JavaScript with a use of Twitter Bootstrap for the front-end. Web application allows entitled (i.e. teachers) users to alter students'
-schedule, while android part only allows to view the timetable.}
 
 %----------------------------------------------------------------------------------------
 %	ACHIEVEMENTS SECTION
@@ -98,17 +92,8 @@ schedule, while android part only allows to view the timetable.}
 
 \section{Technology summary}
 
-\cvitem{\scriptsize{Languages (good knowledge)}}{Java, C}
-\cvitem{\scriptsize{Languages (basic knowledge)}}{Go, C++, Python, Ruby, Scala, Kotlin, Haskell, JavaScript}
-\cvitem{\scriptsize{Technologies}}{git, docker, postgreSQL, Linux, OpenCL, google protobuf, ROS, ElasticSearch}
+\cvitem{\scriptsize{Languages}}{C/C++, Golang, Python, Java}
+\cvitem{\scriptsize{Technologies}}{git, docker, SQL, Pytorch, Unix, OpenCL, gRPC/protobuf, ROS, ElasticSearch}
 
-%----------------------------------------------------------------------------------------
-%	LANGUAGES SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Languages}
-
-\cvitemwithcomment{Russian}{Native speaker}{}
-\cvitemwithcomment{English}{Upper Intermediate}{}
 
 \end{document}
